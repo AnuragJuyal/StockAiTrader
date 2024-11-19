@@ -1,3 +1,0 @@
-src
-streamlit_app
-tests
