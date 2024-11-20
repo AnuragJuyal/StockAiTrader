@@ -66,8 +66,8 @@ if data is not None and not data.empty:
     initial_capital = st.sidebar.number_input("Initial Capital", min_value=1000, step=1000)
     management_style = st.sidebar.selectbox("Investment Style", ["Aggressive", "Moderate", "Passive"])
     
-    strategy = st.sidebar.selectbox("Select Strategy", ["Bollinger Band","Simple Moving Avg","MACD", "RSI", "VWAP"])
-    # strategy = st.sidebar.selectbox("Select Strategy", ["Bollinger Band","Simple Moving Avg"])
+    # strategy = st.sidebar.selectbox("Select Strategy", ["Bollinger Band","Simple Moving Avg","MACD", "RSI", "VWAP"])
+    strategy = st.sidebar.selectbox("Select Strategy", ["Bollinger Band"])
 
     # Run Backtest on Button Click
     if st.sidebar.button("Run Backtest"):
