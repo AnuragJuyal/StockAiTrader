@@ -44,7 +44,7 @@ You can choose from different strategies and investment styles to simulate your 
 # selected_symbol = st.sidebar.selectbox("Select Stocks", symbols,index=0)
 
 # File Upload Option (CSV)
-st.sidebar.subheader("2. Upload Data (Optional)")
+st.sidebar.subheader("1. Upload Data (Optional)")
 file_path = st.sidebar.file_uploader("Or upload a CSV file with stock data", type=["csv"])
 
 # Load Data (either from CSV or selected symbols)
@@ -60,7 +60,7 @@ if file_path:
 # Check if data is available before displaying strategy options
 if data is not None and not data.empty:
     # Configuration Inputs
-    st.sidebar.subheader("3. Backtest Configuration")
+    st.sidebar.subheader("2. Backtest Configuration")
     start_date = st.sidebar.date_input("Start Date", value=data.index.min())
     end_date = st.sidebar.date_input("End Date", value=data.index.max())
     initial_capital = st.sidebar.number_input("Initial Capital", min_value=1000, step=1000)
