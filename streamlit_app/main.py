@@ -4,10 +4,6 @@ import matplotlib.pyplot as plt
 from matplotlib.table import Table
 from src.data.data_loader import load_data
 from src.strategies.bollinger_band import BollingerBandStrategy
-from src.strategies.macd import MACDStrategy
-from src.strategies.rsi import RSIStrategy
-from src.strategies.simple_moving_average import SMAStrategy
-from src.strategies.vwap import VWAPStrategy
 from src.backtest.backtester import Backtester
 from src.utils.visualizations import plot_stock_data, plot_stock_with_signals
 
@@ -44,7 +40,7 @@ You can choose from different strategies and investment styles to simulate your 
 # selected_symbol = st.sidebar.selectbox("Select Stocks", symbols,index=0)
 
 # File Upload Option (CSV)
-st.sidebar.subheader("1. Upload Data (Optional)")
+st.sidebar.subheader("1. Upload Data")
 file_path = st.sidebar.file_uploader("Or upload a CSV file with stock data", type=["csv"])
 
 # Load Data (either from CSV or selected symbols)
